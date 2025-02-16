@@ -20,7 +20,7 @@ const calculateHourlyWage = function(salary, hoursPerWeek) {
     let hourlyWage = salary / (hoursPerWeek * 52);
     
     // Console log formula output
-    console.log(`Hourly Wage: $${hourlyWage.toFixed(2)}`)
+    console.log(`Hourly Wage: $${hourlyWage.toFixed(2)}`);
 }
 
 // Test Data
