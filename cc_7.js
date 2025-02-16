@@ -49,3 +49,28 @@ const calculateLoyaltyDiscount = (amount, years) => {
 calculateLoyaltyDiscount(100, 6);
 
 calculateLoyaltyDiscount(200, 2);
+
+// TASK 4: PARAMETERS AND ARGUMENTS - PRODUCT SHIPPING COST CALCULATION
+
+// Create function to calculate shipping fees
+function calculateShippingCost(weight, location, expedited = false) {    
+    let shippingFees = 0;
+    
+    // Determine shipping cost based on location
+    if (location === "USA") {
+        shippingFees = 5 + (0.5 * weight)}
+    else if (location === "Canada") {
+        shippingFees = 10 + (0.7 * weight)}
+    
+    // Add expedited shipping fee if applicable
+    if (expedited) {
+        shippingFees += 10};
+    
+    // Console log final shipping fee
+    console.log(`Shipping Cost: $${shippingFees.toFixed(2)}`)
+}
+
+// Test Data
+calculateShippingCost(10, "USA", true);
+
+calculateShippingCost(5, "Canada", false);
