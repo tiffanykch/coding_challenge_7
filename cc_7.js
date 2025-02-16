@@ -74,3 +74,21 @@ function calculateShippingCost(weight, location, expedited = false) {
 calculateShippingCost(10, "USA", true);
 
 calculateShippingCost(5, "Canada", false);
+
+// TASK 5: RETURNING VALUES - BUSINESS LOAN INTEREST CALCULATION
+
+// Create function that returns total interest
+function calculateLoanInterest(principal, rate, years) {
+    let interest = principal * rate * years;
+    
+    // Console log total interest
+    console.log(`Total Interest: $${interest.toFixed(2)}`);
+
+    // Return interest value
+    return interest;
+}
+
+// Test Data
+calculateLoanInterest(1000, 0.05, 3);
+
+calculateLoanInterest(5000, 0.07, 5);
