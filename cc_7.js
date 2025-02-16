@@ -96,3 +96,10 @@ console.log(calculateLoanInterest(5000, 0.07, 5));
 let transactions = [500, 1200, 3000, 800, 2200];
 
 // Create higher-order function to filter transactions above $1000
+function filterHighValueTransactions(transactions, filterFunction) {
+    let filteredTransactions = transactions.filter(filterFunction);
+    console.log(filteredTransactions);
+}
+
+// Test Case
+filterHighValueTransactions(transactions, amount => amount > 1000);
