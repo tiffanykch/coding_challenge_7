@@ -27,3 +27,26 @@ const calculateHourlyWage = function(salary, hoursPerWeek) {
 calculateHourlyWage(52000, 40);
 
 calculateHourlyWage(75000, 35);
+
+// TASK 3: ARROW FUNCTION - CUSTOMER LOYALTY DISCOUNT
+
+// Create arrow function that applies a discount
+const calculateLoyaltyDiscount = (amount, years) => {
+    let discount = 0;
+
+    // Conditional statements to determine discount rate based on years
+    if (years >= 5) {discount = 0.15}
+    else if (years >= 3) {discount = 0.1}
+    else {discount = 0.05};
+
+    // Calculate discounted price
+    discountedPrice = amount * (1 - discount)
+
+    // Console log discounted price
+    console.log(`Discounted Price: $${discountedPrice.toFixed(2)}`)
+}
+
+// Test Data
+calculateLoyaltyDiscount(100, 6);
+
+calculateLoyaltyDiscount(200, 2);
