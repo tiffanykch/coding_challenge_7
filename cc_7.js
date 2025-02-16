@@ -103,3 +103,22 @@ function filterHighValueTransactions(transactions, filterFunction) {
 
 // Test Case
 filterHighValueTransactions(transactions, amount => amount > 1000);
+
+// TASK 7: CLOSURES - BUDGET TRACKER
+
+// Create a function that returns another to add expenses and keep running balance
+function createBudgetTracker() {
+    let totalExpenses = 0;
+
+    return function(amount) {
+        totalExpenses += amount;
+        return `Current Balance: -$${totalExpenses}`;
+    }
+}
+
+// Test Data
+let budget = createBudgetTracker()
+
+console.log(budget(300));
+
+console.log(budget(200));
