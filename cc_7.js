@@ -122,3 +122,16 @@ let budget = createBudgetTracker()
 console.log(budget(300));
 
 console.log(budget(200));
+
+// TASK 8: RECURSION IN JAVASCRIPT - BUSINESS GROWTH PROJECTION
+
+// Create recursive function to project revenue growth
+function calculateGrowth(years, revenue) {
+    if (years >= 10) return revenue;
+    return calculateGrowth(years + 1, revenue * 1.05);
+}
+
+// Test Data
+console.log(`Projected Revenue: $${calculateGrowth(8, 1000).toFixed(2)}`);
+
+console.log(`Projected Revenue: $${calculateGrowth(5, 5000).toFixed(2)}`);
